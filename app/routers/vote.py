@@ -31,3 +31,5 @@ def vote(vote: schemas.Vote, db: Session = Depends(database.get_db), current_use
         db.commit()
 
         return {"message": "successfully deleted vote"}
+
+# add in logic to prevent users from voting on their own posts
